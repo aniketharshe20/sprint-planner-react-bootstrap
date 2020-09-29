@@ -37,24 +37,11 @@
     }
 }
 
-.usTitle {
-    font-size: 20px;
+.color666 {
     color: #666;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.usDetails {
-    color: #5a5a5a;
-    margin-top: 15px;
 }
 
 .details-section {
     min-height: 300px;
     overflow-y: scroll;
-}
-
-.tasks {
-    border-top: 1px solid black;
-    padding-top: 20px;
 }

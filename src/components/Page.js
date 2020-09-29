@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/simple-sidebar.css';
 import Sidebar from "./Sidebar";
 import Panel from "./Panel";
+import Summary from './Summary';
 
 let data = require("../userstories.json");
 let stories = data['data'];
@@ -11,7 +12,8 @@ class Page extends Component {
         super(props);
         this.state = {
             selectedUS: null,
-            estimate: [],
+            estimate: {},
+            showSummary: 0
         }
     }
 
@@ -24,23 +26,25 @@ class Page extends Component {
                 currentUS = item;
             }
         });
-        this.setState({ selectedUS: currentUS });
+        this.setState({ selectedUS: currentUS, showSummary: 0 });
     }
 
     // Returns the initial estimate array
     initEstimate = () => {
         let userEstimate = this.state.estimate;
-
-        if (typeof userEstimate[this.state.selectedUS.id] == "undefined") {
-            userEstimate[this.state.selectedUS.id] = [];
-            userEstimate[this.state.selectedUS.id]['estimatedHrs'] = '';
-            userEstimate[this.state.selectedUS.id]['notes'] = '';
-            userEstimate[this.state.selectedUS.id]['tasks'] = [];
+        if (typeof userEstimate[this.state.selectedUS.id] === "undefined") {
+            let estimate = {
+                number: this.state.selectedUS.number,
+                estimatedHrs: '',
+                notes: '',
+                tasks: []
+            };
+            userEstimate[this.state.selectedUS.id] = estimate;
         }
         return userEstimate;
     }
 
-    // Adda the tasks for the user story
+    // Adds the tasks for the user story
     updateTasks = (event) => {
         let userEstimate = this.initEstimate();
         userEstimate[this.state.selectedUS.id]['tasks'].push(event.target.value);
@@ -68,10 +72,16 @@ class Page extends Component {
 
     // Shows the total summary of all user stories estimated
     showSummary = () => {
-
+        this.setState({ showSummary: 1 });
     }
 
     render() {
+        let bodyComponent = <Panel selectedUS={this.state.selectedUS} estimate={this.state.estimate}
+                                   updateTasks={this.updateTasks} updateEstimate={this.updateEstimate}
+                                   removeTask={this.removeTask} />;
+        if (this.state.showSummary == 1) {
+            bodyComponent = <Summary estimate={this.state.estimate}></Summary>;
+        }
         return (
             <div id="wrapper" className="d-flex">
                 <div id="sidebar-wrapper" className="bg-light border-right">
@@ -80,10 +90,14 @@ class Page extends Component {
                 </div>
                 <div id="page-content-wrapper">
                     <div className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                        <a href="" onClick={() => this.showSummary}>Summary</a>
+                        <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li className="nav-item">
+                            <a href="#" className="nav-link" onClick={() => this.showSummary()}>Summary</a>
+                        </li>
+                        </ul>
                     </div>
                     <div className="container-fluid">
-                        <Panel selectedUS={this.state.selectedUS} estimate={this.state.estimate} updateTasks={this.updateTasks} updateEstimate={this.updateEstimate} removeTask={this.removeTask} />
+                        {bodyComponent}
                     </div>
                 </div>
             </div>

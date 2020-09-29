@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import UserStoryDetails from './UserStoryDetails.js';
-import Tasks from './Tasks.js';
+import UserStoryDetails from './UserStoryDetails';
+import Tasks from './Tasks';
 
 class Panel extends Component {
 
@@ -8,7 +8,9 @@ class Panel extends Component {
         let details, tasks;
         if (this.props.selectedUS != null) {
             details = <UserStoryDetails usDetails={this.props.selectedUS} />;
-            tasks = <Tasks estimate={this.props.estimate} updateTasks={this.props.updateTasks} updateEstimate={this.props.updateEstimate} usDetails={this.props.selectedUS} removeTask={this.props.removeTask}/>
+            tasks = <Tasks estimate={this.props.estimate} updateTasks={this.props.updateTasks}
+                           updateEstimate={this.props.updateEstimate} usDetails={this.props.selectedUS}
+                           removeTask={this.props.removeTask}/>
         }
         return (
             <div className="panel">
