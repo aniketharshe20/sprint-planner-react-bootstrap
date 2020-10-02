@@ -77,8 +77,8 @@ class Page extends Component {
 
     render() {
         let bodyComponent = <Panel selectedUS={this.state.selectedUS} estimate={this.state.estimate}
-                                   updateTasks={this.updateTasks} updateEstimate={this.updateEstimate}
-                                   removeTask={this.removeTask} />;
+            updateTasks={this.updateTasks} updateEstimate={this.updateEstimate}
+            removeTask={this.removeTask} />;
         if (this.state.showSummary == 1) {
             bodyComponent = <Summary estimate={this.state.estimate}></Summary>;
         }
@@ -90,10 +90,10 @@ class Page extends Component {
                 </div>
                 <div id="page-content-wrapper">
                     <div className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                        <ul class="navbar-nav mt-2 mt-lg-0">
-                        <li className="nav-item">
-                            <a href="#" className="nav-link" onClick={() => this.showSummary()}>Summary</a>
-                        </li>
+                        <ul className="navbar-nav mt-2 mt-lg-0">
+                            <li className="nav-item">
+                                <a href="#" className="nav-link" onClick={() => this.showSummary()}>Summary</a>
+                            </li>
                         </ul>
                     </div>
                     <div className="container-fluid">

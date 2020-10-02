@@ -41,6 +41,10 @@
     color: #666;
 }
 
+.color666:hover {
+    color: #495057;
+}
+
 .details-section {
     min-height: 300px;
     overflow-y: scroll;
