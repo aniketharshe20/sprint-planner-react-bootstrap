@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/sprint-planner-react-bootstrap/static/css/main.5e209a6d.chunk.css",
-    "main.js": "/sprint-planner-react-bootstrap/static/js/main.0d3c395a.chunk.js",
-    "main.js.map": "/sprint-planner-react-bootstrap/static/js/main.0d3c395a.chunk.js.map",
+    "main.css": "/sprint-planner-react-bootstrap/static/css/main.ecc2df0e.chunk.css",
+    "main.js": "/sprint-planner-react-bootstrap/static/js/main.813e65fc.chunk.js",
+    "main.js.map": "/sprint-planner-react-bootstrap/static/js/main.813e65fc.chunk.js.map",
     "runtime-main.js": "/sprint-planner-react-bootstrap/static/js/runtime-main.7defe2d0.js",
     "runtime-main.js.map": "/sprint-planner-react-bootstrap/static/js/runtime-main.7defe2d0.js.map",
-    "static/js/2.790bd964.chunk.js": "/sprint-planner-react-bootstrap/static/js/2.790bd964.chunk.js",
-    "static/js/2.790bd964.chunk.js.map": "/sprint-planner-react-bootstrap/static/js/2.790bd964.chunk.js.map",
+    "static/js/2.24bbe21b.chunk.js": "/sprint-planner-react-bootstrap/static/js/2.24bbe21b.chunk.js",
+    "static/js/2.24bbe21b.chunk.js.map": "/sprint-planner-react-bootstrap/static/js/2.24bbe21b.chunk.js.map",
     "index.html": "/sprint-planner-react-bootstrap/index.html",
-    "precache-manifest.00ce003ddc6f22213e9644a44484f36c.js": "/sprint-planner-react-bootstrap/precache-manifest.00ce003ddc6f22213e9644a44484f36c.js",
+    "precache-manifest.dcecf5cb64e92d4897f86dcee2e1036f.js": "/sprint-planner-react-bootstrap/precache-manifest.dcecf5cb64e92d4897f86dcee2e1036f.js",
     "service-worker.js": "/sprint-planner-react-bootstrap/service-worker.js",
-    "static/css/main.5e209a6d.chunk.css.map": "/sprint-planner-react-bootstrap/static/css/main.5e209a6d.chunk.css.map",
-    "static/js/2.790bd964.chunk.js.LICENSE.txt": "/sprint-planner-react-bootstrap/static/js/2.790bd964.chunk.js.LICENSE.txt"
+    "static/css/main.ecc2df0e.chunk.css.map": "/sprint-planner-react-bootstrap/static/css/main.ecc2df0e.chunk.css.map",
+    "static/js/2.24bbe21b.chunk.js.LICENSE.txt": "/sprint-planner-react-bootstrap/static/js/2.24bbe21b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7defe2d0.js",
-    "static/js/2.790bd964.chunk.js",
-    "static/css/main.5e209a6d.chunk.css",
-    "static/js/main.0d3c395a.chunk.js"
+    "static/js/2.24bbe21b.chunk.js",
+    "static/css/main.ecc2df0e.chunk.css",
+    "static/js/main.813e65fc.chunk.js"
   ]
 }

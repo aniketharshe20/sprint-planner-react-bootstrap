@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sprint-planner-react-bootstrap/precache-manifest.00ce003ddc6f22213e9644a44484f36c.js"
+  "/sprint-planner-react-bootstrap/precache-manifest.dcecf5cb64e92d4897f86dcee2e1036f.js"
 );
 
 self.addEventListener('message', (event) => {
